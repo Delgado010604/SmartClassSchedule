@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><!--
+      FIX: Changed parent to NoActionBar to prevent conflicts with the MaterialToolbar
+      you are using in your layouts. This is the main cause of the crash on launch.
+    -->
+    <style name="Theme.SmartClass" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/icons</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent</item>
+        <item name="colorOnSecondary">@color/primary_text</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <!--
+      REMOVED: The custom button style `App.Button.Primary` was causing issues.
+      It's better to rely on the default MaterialButton styling provided by the main theme.
+      Your layout uses MaterialButton, so it will now be styled correctly.
+    -->
+</resources>
